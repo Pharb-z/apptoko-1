@@ -39,9 +39,11 @@ public class AppToko {
                 if(!founde){
                     cart.add(new cCart(g, qty));
                 }
+                cCart.printHeader();
                 for(cCart c : cart){
                     System.out.println(c);
                 }
+                cCart.printFooter();
                 g.setStock(g.getStock() - qty);
                 System.out.println(" Goods added!");
             }else{
@@ -70,17 +72,18 @@ public class AppToko {
             cekMember = true;
         }else{
             System.out.println("Cust : " + bName);
-            System.out.println("lu bukan member jink");
+            System.out.println("bukan member");
         }
-        System.out.println("-------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------");
         for(cCart c : cart){
             System.out.println(c);
             total += c.getSubtotal();
         }
-        System.out.println("-------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------");
         int orderNumber = invoiceList.size() + 1;
-        cInvoice invc = new cInvoice(cashier, total, orderNumber);
+        cInvoice invc = new cInvoice(cashier, bName, total, orderNumber);
         System.out.println(invc);
+        invoiceList.add(invc);
         if (!cekMember) {
             
         }else{
