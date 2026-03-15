@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 public class AppToko {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -46,8 +46,6 @@ public class AppToko {
                 cCart.printFooter();
                 g.setStock(g.getStock() - qty);
                 System.out.println(" Goods added!");
-            }else{
-                System.out.println("Error quantity!");
             }
             }else{
                 System.out.println("Goods not found!");

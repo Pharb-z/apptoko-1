@@ -1,20 +1,19 @@
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Iterator;
 public class cBuyerManage {
-
     public static void save(List<cBuyer> memberList) {
         try {
             FileWriter writer = new FileWriter("member.txt");
 
             for (cBuyer mem : memberList) {
-                writer.write(mem.getId() + "," +
-                        mem.getName() + "," +
-                        mem.getAddress() + "," +
-                        mem.getPerks() + "," +
-                        mem.getPoint() + "\n");
+                writer.write(mem.getId() + ","
+                        + mem.getName() + ","
+                        + mem.getAddress() + ","
+                        + mem.getPerks() + ","
+                        + mem.getPoint() + "\n");
             }
 
             writer.close();
@@ -93,15 +92,17 @@ public class cBuyerManage {
             System.out.println("Error search member!");
         }
     }
-    public static cBuyer verifBuyer(List<cBuyer> memList, String id){
-        for(cBuyer mm : memList){
-            if(mm.getName().equalsIgnoreCase(id) || mm.getId().equalsIgnoreCase(id)){
+
+    public static cBuyer verifBuyer(List<cBuyer> memList, String id) {
+        for (cBuyer mm : memList) {
+            if (mm.getName().equalsIgnoreCase(id) || mm.getId().equalsIgnoreCase(id)) {
                 return mm;
             }
         }
-    return null;
+        return null;
     }
-    public static void deleteMember(List<cBuyer> memList, String targetMem){
+
+    public static void deleteMember(List<cBuyer> memList, String targetMem) {
         Iterator<cBuyer> it = memList.iterator();
         boolean found = false;
 
@@ -114,9 +115,9 @@ public class cBuyerManage {
             }
         }
         if (found) {
-                System.out.println("Member deleted!");
-            }else{
-                System.out.println("Can't find member");
-            }
-    }   
+            System.out.println("Member deleted!");
+        } else {
+            System.out.println("Can't find member");
+        }
+    }
 }

@@ -19,10 +19,10 @@ public class AppToko2 {
         String address;
         String perks;
         int memPoin = 0;
-        int choice = 0;
-        int choice3 = 0;
-        String nextAdd = "y";
-        String yorn = "y";
+        int choice;
+        int choice3;
+        String nextAdd;
+        String yorn;
         String chDelete;
         String delMember;
         boolean found = false;
@@ -73,8 +73,8 @@ public class AppToko2 {
                             if (goodsList.isEmpty()) {
                                 System.out.println("Empty goods!");
                             } else {
-                                System.out.printf("%-5s %-10s %-36s %-10s %-10s\n", "No", "ID", "Name", "Price",
-                                        "Stock");
+                                System.out.printf("%-5s %-10s %-36s %-10s %-10s\n",
+                                                "No", "ID", "Name", "Price","Stock");
                                 System.out.println(
                                         "----------------------------------------------------------------------");
 
