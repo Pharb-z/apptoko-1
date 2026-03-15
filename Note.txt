@@ -3,3 +3,4 @@ cBuyerManage.deleteMember(memberList, delMember);
 System.out.print(" Input Member ID or Name : ");
                             String delMember = sc.nextLine();
                             cBuyerManage.searchMember(delMember);
+akjlafjkdsfljdsh
