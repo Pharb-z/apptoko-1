@@ -93,4 +93,12 @@ public class cBuyerManage {
             System.out.println("Error search member!");
         }
     }
+    public static cBuyer verifBuyer(List<cBuyer> memList, String id){
+       for(cBuyer mm : memList){
+           if(mm.getName().equalsIgnoreCase(id) || mm.getId().equalsIgnoreCase(id)){
+               return mm;
+           }
+       }
+   return null;
+   }
 }

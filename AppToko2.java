@@ -35,9 +35,10 @@ public class AppToko2 {
                     System.out.println("  Goods Menu");
                     System.out.println("  1. Add");
                     System.out.println("  2. Read");
-                    System.out.println("  3. Update");
-                    System.out.println("  4. Delete");
-                    System.out.println("  5. Back");
+                    System.out.println("  3. Find Goods");
+                    System.out.println("  4. Update");
+                    System.out.println("  5. Delete");
+                    System.out.println("  6. Back");
                     System.out.print("  Choose : ");
                     int choice2 = sc.nextInt();
                     sc.nextLine();
@@ -86,6 +87,12 @@ public class AppToko2 {
                             }
                             break;
                         case 3:
+                            System.out.println(" ===Find Goods===");
+                            System.out.print(" Input Goods ID or Name : ");
+                            String scGoods = sc.nextLine();
+                            cGoodsList.searchGoods(scGoods);
+                            break;
+                        case 4:
                             // if(good != null){
                             // System.out.print("New Price : ");
                             // double nprice = sc.nextDouble();
@@ -126,7 +133,7 @@ public class AppToko2 {
                                     break;
                             }
                             break;
-                        case 4:
+                        case 5:
                             // System.out.println("Delete " + good.getName());
                             // System.out.print("1. Yes or 2. No : ");
                             // int confirm = sc.nextInt();
@@ -148,7 +155,7 @@ public class AppToko2 {
                             cGoodsList.deleteGoods(goodsList, chDelete);
 
                             break;
-                        case 5:
+                        case 6:
                             System.out.println("Back to Main...");
                     }
                     break;
@@ -175,6 +182,13 @@ public class AppToko2 {
                                 address = sc.nextLine();
                                 System.out.print(" Perks   : ");
                                 perks = sc.nextLine();
+                                if (perks.equalsIgnoreCase("silver")) {
+                                    memPoin = 200;
+                                }else if (perks.equalsIgnoreCase("gold")) {
+                                    memPoin = 500;
+                                }else if (perks.equalsIgnoreCase("platinum")) {
+                                    memPoin = 1000;
+                                }
                                 System.out.print("Add " + buyerName + " to new member(y/n) ");
                                 nextAdd = sc.next();
                             } while (!nextAdd.equalsIgnoreCase("y"));
@@ -229,5 +243,6 @@ public class AppToko2 {
                     System.out.println("Thank you!");
             }
         } while (choice != 3);
+        sc.close();
     }
 }

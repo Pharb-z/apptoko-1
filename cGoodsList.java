@@ -82,7 +82,7 @@ public class cGoodsList {
     
     while(it.hasNext()){
         cGoods g = it.next();
-        if(g.getId().equalsIgnoreCase(targetGoods)){
+        if(g.getIdGoods().equalsIgnoreCase(targetGoods)){
             it.remove();
             found = true;
             break;
@@ -122,5 +122,7 @@ public class cGoodsList {
    }catch(Exception e){
            System.out.println("Goods not found!");
         }
+        
    }
+   
 }
