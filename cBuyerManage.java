@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.Iterator;
 public class cBuyerManage {
 
     public static void save(List<cBuyer> memberList) {
@@ -93,4 +93,30 @@ public class cBuyerManage {
             System.out.println("Error search member!");
         }
     }
+    public static cBuyer verifBuyer(List<cBuyer> memList, String id){
+        for(cBuyer mm : memList){
+            if(mm.getName().equalsIgnoreCase(id) || mm.getId().equalsIgnoreCase(id)){
+                return mm;
+            }
+        }
+    return null;
+    }
+    public static void deleteMember(List<cBuyer> memList, String targetMem){
+        Iterator<cBuyer> it = memList.iterator();
+        boolean found = false;
+
+        while (it.hasNext()) {
+            cBuyer m = it.next();
+            if (m.getId().equalsIgnoreCase(targetMem) || m.getName().equalsIgnoreCase(targetMem)) {
+                it.remove();
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+                System.out.println("Member deleted!");
+            }else{
+                System.out.println("Can't find member");
+            }
+    }   
 }

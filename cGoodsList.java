@@ -82,7 +82,7 @@ public class cGoodsList {
     
     while(it.hasNext()){
         cGoods g = it.next();
-        if(g.getId().equalsIgnoreCase(targetGoods)){
+        if(g.getIdGoods().equalsIgnoreCase(targetGoods)){
             it.remove();
             found = true;
             break;
@@ -94,16 +94,16 @@ public class cGoodsList {
         System.out.println("Can't find goods!");
     }
 }
-   public static cGoods cartGoods(List<cGoods> goodsList, String id){
-       for(cGoods g : goodsList){
-           if(g.getIdGoods().equalsIgnoreCase(id)){
-               return g;
-           }
-       }
-   return null;
-   }
-   public static void scCart(String targetGoods){
-       try{
+    public static cGoods cartGoods(List<cGoods> goodsList, String id){
+        for(cGoods g : goodsList){
+            if(g.getIdGoods().equalsIgnoreCase(id)){
+                return g;
+            }
+        }
+    return null;
+    }
+    public static void scCart(String targetGoods){
+        try{
         File file = new File("goods.txt");
         Scanner reader = new Scanner(file);
         boolean found = false;
@@ -118,9 +118,11 @@ public class cGoodsList {
             found = true;
             break;
     }
-       }
-   }catch(Exception e){
-           System.out.println("Goods not found!");
         }
-   }
+    }catch(Exception e){
+            System.out.println("Goods not found!");
+        }
+        
+    }
+    
 }
