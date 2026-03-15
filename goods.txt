@@ -1,4 +1,4 @@
-B001,Indomie Goreng,3500.0,49
+B001,Indomie Goreng,3500.0,38
 B002,Indomie Soto,3500.0,50
 B003,Mie Sedaap Goreng,3600.0,80
 B004,Aqua 600ml,4000.0,120
@@ -20,7 +20,7 @@ B019,Chitato Sapi Panggang,10000.0,50
 B020,Lays Rumput Laut,9500.0,45
 B021,Tango Wafer Coklat,7000.0,60
 B022,Good Day Cappuccino,2500.0,90
-B023,Kapal Api Special Mix,2000.0,84
+B023,Kapal Api Special Mix,2000.0,68
 B024,Gula Pasir 1kg,16000.0,40
 B025,Telur Ayam 1kg,28000.0,25
 B026,Minyak Goreng Bimoli 1L,20000.0,30

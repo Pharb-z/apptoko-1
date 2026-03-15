@@ -7,7 +7,7 @@
 25082010008,Febriana,Surabaya,Bronze,0
 25082010009,Hattami,Surabaya,Bronze,0
 25082010010,Naisa,Surabaya,Bronze,0
-25082010013,Rivan,Surabaya,Bronze,0
+25082010013,Rivan,Surabaya,Bronze,70
 25082010014,Calista,Surabaya,Bronze,0
 25082010015,Hafiz,Surabaya,Bronze,0
 25082010016,Karenina,Surabaya,Bronze,0
