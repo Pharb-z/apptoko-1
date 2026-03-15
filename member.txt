@@ -18,7 +18,7 @@
 25082010021,Jihan,Surabaya,Bronze,0
 25082010023,Dhiya,Surabaya,Bronze,0
 25082010024,Fitra,Surabaya,Bronze,0
-25082010026,Farrel,Sidoarjo,Bronze,5
+25082010026,Farrel,Sidoarjo,Silver,255
 25082010027,Khalila,Surabaya,Bronze,83
 25082010028,Putra,Surabaya,Bronze,0
 25082010029,Vietto,Surabaya,Bronze,0

@@ -16,7 +16,7 @@ B015,Roti Coklat Sari Roti,8500.0,40
 B016,Beng Beng,2500.0,100
 B017,SilverQueen 65g,15000.0,35
 B018,KitKat 4 Finger,9000.0,40
-B019,Chitato Sapi Panggang,10000.0,50
+B019,Chitato Sapi Panggang,10000.0,38
 B020,Lays Rumput Laut,9500.0,45
 B021,Tango Wafer Coklat,7000.0,40
 B022,Good Day Cappuccino,2500.0,90
@@ -68,7 +68,7 @@ B067,Kornet Pronas 198g,22000.0,18
 B068,Sarden ABC Saus Tomat,12000.0,40
 B069,Sarden ABC Saus Cabai,12000.0,35
 B070,Susu Kental Manis Indomilk,12000.0,45
-B071,Susu Kental Manis Frisian Flag,12000.0,50
+B071,Susu Kental Manis Frisian Flag,12000.0,38
 B072,Margarin Blue Band 200g,9000.0,40
 B073,Keju Kraft Cheddar 165g,22000.0,30
 B074,Saus Tomat ABC 340ml,8500.0,35

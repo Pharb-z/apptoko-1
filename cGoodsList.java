@@ -1,8 +1,8 @@
-import java.io.FileWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Iterator;
 public class cGoodsList {
     public static void save(List <cGoods> goodsList) {
         try {
