@@ -1,7 +1,9 @@
-import java.util.Scanner;
+
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AppToko2 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<cGoods> goodsList = new ArrayList<>();
@@ -105,32 +107,34 @@ public class AppToko2 {
                             System.out.println("2. Update stock");
                             System.out.print("Choose : ");
                             int chUpdate = sc.nextInt();
-                            for (int i = 0; i < goodsList.size(); i++) {
-                                System.out.println((i + 1) + ". " + goodsList.get(i));
-                            }
+                            sc.nextLine();
                             switch (chUpdate) {
                                 case 1:
-                                    System.out.print("Choose goods number to update price : ");
-                                    int chPrice = sc.nextInt();
-                                    if (chPrice > 0 && chPrice <= goodsList.size()) {
-                                        System.out.print("New price : ");
-                                        double nprice = sc.nextDouble();
-                                        goodsList.get(chPrice - 1).setPrice(nprice);
-                                        System.out.println("Price updated!");
-                                    } else {
-                                        System.out.println("Invalid choice!");
+                                    System.out.print("Input goods name or id to update price : ");
+                                    String chPrice = sc.nextLine();
+                                    cGoodsList.searchGoods(chPrice);
+                                    for (cGoods g : goodsList) {
+                                        if (g.getIdGoods().equalsIgnoreCase(chPrice)) {
+                                            System.out.print("Input new price : ");
+                                            price = sc.nextDouble();
+                                            sc.nextLine();
+                                            g.setPrice(price);
+                                            System.out.println("Price updated!");
+                                        }
                                     }
                                     break;
                                 case 2:
-                                    System.out.println("Choose goods number to update stock : ");
-                                    int chStock = sc.nextInt();
-                                    if (chStock > 0 && chStock <= goodsList.size()) {
-                                        System.out.print("New stock : ");
-                                        int nstock = sc.nextInt();
-                                        goodsList.get(chStock - 1).setStock(nstock);
-                                        System.out.println("Stock updated!");
+                                    System.out.print("Input goods name or id to update stock : ");
+                                    String chStock = sc.nextLine();
+                                    cGoodsList.searchGoods(chStock);
+                                    for (cGoods g : goodsList) {
+                                        if (g.getIdGoods().equalsIgnoreCase(chStock)) {
+                                            System.out.print("Input new stock : ");
+                                            stock = sc.nextInt();
+                                            g.setStock(g.getStock() + stock);
+                                            System.out.println("Stock updated!");
+                                        }
                                     }
-
                                     break;
                             }
                             break;
@@ -155,7 +159,7 @@ public class AppToko2 {
                                 sc.nextLine();
                             } while (!yorn.equalsIgnoreCase("y"));
                             cGoodsList.deleteGoods(goodsList, chDelete);
-                            
+
                             break;
                         case 6:
                             System.out.println("Back to Main...");
@@ -186,9 +190,9 @@ public class AppToko2 {
                                 perks = sc.nextLine();
                                 if (perks.equalsIgnoreCase("silver")) {
                                     memPoin = 200;
-                                }else if (perks.equalsIgnoreCase("gold")) {
+                                } else if (perks.equalsIgnoreCase("gold")) {
                                     memPoin = 500;
-                                }else if (perks.equalsIgnoreCase("platinum")) {
+                                } else if (perks.equalsIgnoreCase("platinum")) {
                                     memPoin = 1000;
                                 }
                                 System.out.print("Add " + buyerName + " to new member(y/n) ");
@@ -219,20 +223,20 @@ public class AppToko2 {
                                             m.getName(),
                                             m.getAddress(),
                                             m.getPerks());
-                                            // m.getPoint());
+                                    // m.getPoint());
                                 }
                             }
                             break;
                         case 3:
                             System.out.println(" ===Delete Member===");
-                            do{
-                            System.out.print(" Input Member ID or Name : ");
-                            delMember = sc.nextLine();
-                            cBuyerManage.searchMember(delMember);
-                            System.out.println("Are you sure to delete this member? (y/n)");
-                            yorn = sc.next();
-                            sc.nextLine();
-                            }while(!yorn.equalsIgnoreCase("y"));
+                            do {
+                                System.out.print(" Input Member ID or Name : ");
+                                delMember = sc.nextLine();
+                                cBuyerManage.searchMember(delMember);
+                                System.out.println("Are you sure to delete this member? (y/n)");
+                                yorn = sc.next();
+                                sc.nextLine();
+                            } while (!yorn.equalsIgnoreCase("y"));
                             cBuyerManage.deleteMember(memberList, delMember);
                             break;
                         case 4:
