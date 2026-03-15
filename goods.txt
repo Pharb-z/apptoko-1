@@ -1,4 +1,4 @@
-B001,Indomie Goreng,3500.0,5
+B001,Indomie Goreng,3500.0,70
 B002,Indomie Soto,3500.0,29
 B003,Mie Sedaap Goreng,3600.0,80
 B004,Aqua 600ml,4000.0,120
