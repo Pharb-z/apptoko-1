@@ -22,6 +22,7 @@ public class AppToko2 {
         String nextAdd = "y";
         String yorn = "y";
         String chDelete;
+        String delMember;
         boolean found = false;
         cBuyerManage.load(memberList);
         cGoodsList.load(goodsList);
@@ -151,9 +152,10 @@ public class AppToko2 {
                                 System.out.println("");
                                 System.out.print("Are you sure to delete this goods? (y/n) ");
                                 yorn = sc.next();
+                                sc.nextLine();
                             } while (!yorn.equalsIgnoreCase("y"));
                             cGoodsList.deleteGoods(goodsList, chDelete);
-
+                            
                             break;
                         case 6:
                             System.out.println("Back to Main...");
@@ -223,6 +225,15 @@ public class AppToko2 {
                             break;
                         case 3:
                             System.out.println(" ===Delete Member===");
+                            do{
+                            System.out.print(" Input Member ID or Name : ");
+                            delMember = sc.nextLine();
+                            cBuyerManage.searchMember(delMember);
+                            System.out.println("Are you sure to delete this member? (y/n)");
+                            yorn = sc.next();
+                            sc.nextLine();
+                            }while(!yorn.equalsIgnoreCase("y"));
+                            cBuyerManage.deleteMember(memberList, delMember);
                             break;
                         case 4:
                             System.out.println(" ===Find Member===");

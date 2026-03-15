@@ -19,10 +19,8 @@ public class cCart {
     }
     @Override
     public String toString(){
-        return "[" + goods.getIdGoods() + "] "
-                + goods.getName()
-                + " | Rp." + goods.getPrice() 
-                + " | Qty: " + qty
-                + " | Subtotal: " + getSubtotal();
+        return String.format("%-8s %-36s %-10.0f %-5d %-10.0f", 
+            goods.getIdGoods(), goods.getName(), goods.getPrice(), qty, getSubtotal());
+        
     }
 }
