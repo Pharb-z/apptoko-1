@@ -1,9 +1,15 @@
+
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
 public class cBuyerManage {
+
+    ArrayList<cBuyer> memberList = new ArrayList<>();
+
     public static void save(List<cBuyer> memberList) {
         try {
             FileWriter writer = new FileWriter("member.txt");
@@ -93,8 +99,8 @@ public class cBuyerManage {
         }
     }
 
-    public static cBuyer verifBuyer(List<cBuyer> memList, String id) {
-        for (cBuyer mm : memList) {
+    public static cBuyer verifBuyer(List<cBuyer> memberList, String id) {
+        for (cBuyer mm : memberList) {
             if (mm.getName().equalsIgnoreCase(id) || mm.getId().equalsIgnoreCase(id)) {
                 return mm;
             }
@@ -120,4 +126,6 @@ public class cBuyerManage {
             System.out.println("Can't find member");
         }
     }
+
+    
 }

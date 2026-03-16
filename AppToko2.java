@@ -25,7 +25,9 @@ public class AppToko2 {
         String yorn;
         String chDelete;
         String delMember;
+        String editPerks; String chIdPerks;
         boolean found = false;
+        boolean chPerks = false;
         cBuyerManage.load(memberList);
         cGoodsList.load(goodsList);
         do {
@@ -245,7 +247,41 @@ public class AppToko2 {
                             cBuyerManage.searchMember(scMember);
                             break;
                         case 5:
-                            System.out.println("");
+                            System.out.println("===Edit Member Perks===");
+                            System.out.print("Input Member ID or Name : ");
+                            chIdPerks = sc.nextLine();
+                            cBuyerManage.searchMember(chIdPerks);
+                            do { 
+                                System.out.print("Change member perks : ");
+                                editPerks = sc.nextLine();
+                                if (editPerks.equalsIgnoreCase("silver")|| 
+                                    editPerks.equalsIgnoreCase("gold")  || 
+                                    editPerks.equalsIgnoreCase("platinum")) {
+                                    chPerks = true;
+                                } else{
+                                    
+                                }
+                                
+                            } while (!chPerks);
+                            
+                            for (cBuyer m : memberList) {
+                                if(m.getId().equalsIgnoreCase(chIdPerks) || m.getName().equalsIgnoreCase(chIdPerks)){
+                                    if(editPerks.equalsIgnoreCase("silver")){
+                                        m.setPerks("Silver");
+                                        m.setPoint(200);
+                                    }else if(editPerks.equalsIgnoreCase("gold")){
+                                        m.setPerks("Gold");
+                                        m.setPoint(500);
+                                    }else if(editPerks.equalsIgnoreCase("Platinum")){
+                                        m.setPerks("Platinum");
+                                        m.setPoint(1000);
+                                    }
+                                    System.out.println("Member perks has changed!");
+                                }else{
+                                    System.out.println("Member not found!");
+                                }
+                            }
+                            
                             break;
                         case 6:
                             System.out.println("Back to Main...");
