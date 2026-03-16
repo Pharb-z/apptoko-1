@@ -27,7 +27,7 @@
 25082010034,Immanuel,Surabaya,Bronze,0
 25082010035,Riyan,Surabaya,Bronze,0
 25082010036,Yehezkiel,Surabaya,Bronze,0
-25082010037,Bhinar,Surabaya,Gold,976
+25082010037,Bhinar,Surabaya,Silver,200
 25082010039,Faril,Surabaya,Bronze,0
 25082010041,Farhan,Sidoarjo,Platinum,1216
 25082010042,Dhiar,Surabaya,Bronze,0
