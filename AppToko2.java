@@ -51,7 +51,6 @@ public class AppToko2 {
                             do {
                                 System.out.print("ID    : ");
                                 idGoods = sc.nextLine();
-                                sc.nextLine();
                                 System.out.print("Name  : ");
                                 name = sc.nextLine();
                                 System.out.print("Price : ");
