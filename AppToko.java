@@ -19,8 +19,10 @@ public class AppToko {
         cGoodsList.load(goodsList);
         cBuyerManage.load(memberList);
 
-        /*goodsList.get(29).setStock(goodsList.get(29).getStock()-1);
-        System.out.println(goodsList.get(29));*/
+        /*
+         * goodsList.get(29).setStock(goodsList.get(29).getStock()-1);
+         * System.out.println(goodsList.get(29));
+         */
         System.out.println("===Welcome to 6 Seven Market===");
         do {
             System.out.print("Input goods ID : ");
@@ -69,16 +71,13 @@ public class AppToko {
         int poin = 0;
         cBuyer mm = cBuyerManage.verifBuyer(memberList, bName);
         int orderNumber = invoiceList.size() + 1;
-        cInvoice invc = new cInvoice(cashier, bName, total, orderNumber);
-        System.out.println("|" + invc + "                                                                   |");
-        invoiceList.add(invc);
         if (mm != null) {
-            System.out.println("| Customer  : " + mm.getName());
-            System.out.println("| Member    : " + mm.getPerks());
+            System.out.printf("| %-82s |\n", "Customer  : " + mm.getName());
+            System.out.printf("| %-82s |\n", "Member    : " + mm.getPerks());
             cekMember = true;
         } else {
-            System.out.println("| Customer  : " + bName);
-            System.out.println("| Member    : None");
+            System.out.printf("| %-82s |\n", "Customer  : " + bName);
+            System.out.printf("| %-82s |\n", "Member    : None");
         }
         System.out.println("--------------------------------------------------------------------------------------");
         for (cCart c : cart) {
@@ -86,47 +85,49 @@ public class AppToko {
             total += c.getSubtotal();
         }
         System.out.println("--------------------------------------------------------------------------------------");
+
+        // default untuk non-member
+        totalDiscount = total;
+
         if (!cekMember) {
 
         } else {
             if (mm.getPerks().equalsIgnoreCase("silver") && total > 200000) {
                 disc = 10;
-                
+
             } else if (mm.getPerks().equalsIgnoreCase("gold") && total > 150000) {
                 disc = 15;
-                
+
             } else if (mm.getPerks().equalsIgnoreCase("platinum") && total > 150000) {
                 disc = 20;
-                
+
             } else if (mm.getPerks().equalsIgnoreCase("bronze") && total > 200000) {
                 disc = 5;
-                
-            }else{
-                
             }
-            
+
             totalDiscount = total - (total * (disc / 100.0));
             poin = (int) (totalDiscount / 1000);
+
             mm.setPoint(mm.getPoint() + poin);
+
             if (mm.getPoint() >= 0 && mm.getPoint() < 200) {
-                String perks = "Bronze";
-                mm.setPerks(perks);
-            } else if (mm.getPoint() >= 200 && mm.getPoint() < 500) {
-                String perks = "Silver";
-                mm.setPerks(perks);
-            } else if (mm.getPoint() >= 500 && mm.getPoint() < 1000) {
-                String perks = "Gold";
-                mm.setPerks(perks);
-            } else if (mm.getPoint() >= 1000) {
-                String perks = "Platinum";
-                mm.setPerks(perks);
+                mm.setPerks("Bronze");
+            } else if (mm.getPoint() < 500) {
+                mm.setPerks("Silver");
+            } else if (mm.getPoint() < 1000) {
+                mm.setPerks("Gold");
+            } else {
+                mm.setPerks("Platinum");
             }
         }
         System.out.printf("| %-8s : %-36.0f  %-10s  %-8s  %-11s |\n", "Before", total, "", "", "");
         System.out.printf("| %-8s : %-36.0f  %-10s  %-8s  %-11s |\n", "Discount", disc, "", "", "");
         System.out.printf("| %-8s : %-36.0f  %-10s  %-8s  %-11s |\n", "Total", totalDiscount, "", "", "");
-        System.out.println("| You got " + poin + " point from this transaction");
+        System.out.printf("| %-82s |\n", "You got " + poin + " point from this transaction");
         System.out.println("--------------------------------------------------------------------------------------");
+        cInvoice invc = new cInvoice(cashier, bName, totalDiscount, orderNumber);
+        System.out.println("|" + invc + "                                                                   |");
+        invoiceList.add(invc);
         cGoodsList.save(goodsList);
         cInvoiceManage.save(invoiceList);
         cBuyerManage.save(memberList);

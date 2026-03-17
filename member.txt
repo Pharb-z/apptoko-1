@@ -22,7 +22,7 @@
 25082010027,Khalila,Surabaya,Bronze,83
 25082010028,Putra,Surabaya,Bronze,0
 25082010029,Vietto,Surabaya,Bronze,0
-25082010030,Rava,Surabaya,Silver,200
+25082010030,Rava,Surabaya,Gold,798
 25082010031,Arden,Surabaya,Bronze,0
 25082010034,Immanuel,Surabaya,Bronze,0
 25082010035,Riyan,Surabaya,Bronze,0
