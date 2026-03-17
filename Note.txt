@@ -1,7 +1,9 @@
-cBuyerManage.deleteMember(memberList, delMember);
-
-System.out.print(" Input Member ID or Name : ");
-                            String delMember = sc.nextLine();
-                            cBuyerManage.searchMember(delMember);
-akjlafjkdsfljdsh
-ulullulu
+AppToko = Class main Aplikasi untuk kasir melakukan pembayaran
+AppToko2 = Class main Aplikasi untuk mengelola barang dan pelanggan
+cBuyer = Class untuk membuat objek pelanggan
+cBuyerManage = Class untuk membuat method yang dapat menyimpan, memuat, dan menghapus data pelanggan pada local data "member.txt"
+cCart = Class untuk membuat objek yang digunakan untuk menghitung jumlah pembelian, jumlah harga, dan desain struk  pada class main AppToko 
+cGoods = Class untuk membuat objek barang
+cGoodsList = Class untuk membuat method yang dapat menyimpan, memuat, dan menghapus data pelanggan pada local data "goods.txt"
+cInvoice = Class untuk generate invoice pembelian secara otomatis dengan format day-date-month-year-pembelian ke-cashier code
+cInvoiceManage = Class untuk membuat method yang dapat menyimpan, memuat, dan menghapus data invoice pembelian pada local data "invoice.txt"

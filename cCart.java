@@ -24,14 +24,14 @@ public class cCart {
     }
 
     public static void printHeader() {
-        System.out.println("+----------+--------------------------------------+------------+-------+------------+");
-        System.out.println("| ID       | NAME                                 | PRICE      | QTY   | SUBTOTAL   |");
-        System.out.println("+----------+--------------------------------------+------------+-------+------------+");
+        System.out.println("+----------+--------------------------------------+------------+-------+-------------+");
+        System.out.println("| ID       | NAME                                 | PRICE      | QTY   | SUBTOTAL    |");
+        System.out.println("+----------+--------------------------------------+------------+-------+-------------+");
     }
 
     @Override
     public String toString() {
-        return String.format("| %-8s | %-36s | %-10.0f | %-5d | %-10.0f |",
+        return String.format("| %-8s | %-36s | %-10.0f | %-5d | %-11.0f |",
                 goods.getIdGoods(),
                 goods.getName(),
                 goods.getPrice(),
@@ -39,6 +39,6 @@ public class cCart {
                 getSubtotal());
     }
     public static void printFooter() {
-        System.out.println("+----------+--------------------------------------+------------+-------+------------+");
+        System.out.println("+----------+--------------------------------------+------------+-------+-------------+");
     }
 }

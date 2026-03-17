@@ -67,11 +67,11 @@ public class AppToko2 {
                             System.out.println("Goods added!");
                             break;
                         case 2:
-                            // if ((good != null) && (good.getName()!=null)){
-                            // System.out.println(good.ToString());
-                            // } else{
-                            // System.out.println("Empty goods");
-                            // }
+                                /*if ((good != null) && (good.getName()!=null)){
+                                System.out.println(good.ToString());
+                                } else{
+                                System.out.println("Empty goods");
+                                }*/
                             if (goodsList.isEmpty()) {
                                 System.out.println("Empty goods!");
                             } else {
@@ -98,13 +98,13 @@ public class AppToko2 {
                             cGoodsList.searchGoods(scGoods);
                             break;
                         case 4:
-                            // if(good != null){
-                            // System.out.print("New Price : ");
-                            // double nprice = sc.nextDouble();
-                            // good.setPrice(nprice);
-                            // }else{
-                            // System.out.println("Goods is empty!");
-                            // }
+                                /*if(good != null){
+                                System.out.print("New Price : ");
+                                double nprice = sc.nextDouble();
+                                good.setPrice(nprice);
+                                }else{
+                                System.out.println("Goods is empty!");
+                                }*/
                             System.out.println("1. Update price");
                             System.out.println("2. Update stock");
                             System.out.print("Choose : ");
@@ -141,15 +141,15 @@ public class AppToko2 {
                             }
                             break;
                         case 5:
-                            // System.out.println("Delete " + good.getName());
-                            // System.out.print("1. Yes or 2. No : ");
-                            // int confirm = sc.nextInt();
-                            // if(confirm == 1){
-                            // good = null;
-                            // System.out.println("Goods is deleted!");
-                            // }else{
-                            // System.out.println("Canceled!");
-                            // }
+                            /*  System.out.println("Delete " + good.getName());
+                                System.out.print("1. Yes or 2. No : ");
+                                int confirm = sc.nextInt();
+                                if(confirm == 1){
+                                good = null;
+                                System.out.println("Goods is deleted!");
+                                }else{
+                                System.out.println("Canceled!");
+                                }*/
                             do {
                                 System.out.print("Choose Goods ID to delete : ");
                                 chDelete = sc.nextLine();
@@ -216,7 +216,7 @@ public class AppToko2 {
                                         "-------------------------------------------------------------");
 
                                 for (int i = 0; i < memberList.size(); i++) {
-
+                                    
                                     cBuyer m = memberList.get(i);
 
                                     System.out.printf("%-5d %-15s %-15s %-15s %-10s \n",
@@ -252,7 +252,6 @@ public class AppToko2 {
 
                             cBuyer member = null;
 
-                            // Loop sampai member ditemukan
                             do {
                                 System.out.print("Input Member ID or Name : ");
                                 chIdPerks = sc.nextLine();
@@ -265,15 +264,14 @@ public class AppToko2 {
 
                             } while (member == null);
 
-                            // validasi perks
                             chPerks = false;
                             do {
                                 System.out.print("Change member perks : ");
                                 editPerks = sc.nextLine();
 
-                                if (editPerks.equalsIgnoreCase("silver") ||
-                                        editPerks.equalsIgnoreCase("gold") ||
-                                        editPerks.equalsIgnoreCase("platinum")) {
+                                if (editPerks.equalsIgnoreCase("silver")
+                                        || editPerks.equalsIgnoreCase("gold")
+                                        || editPerks.equalsIgnoreCase("platinum")) {
 
                                     chPerks = true;
 
@@ -283,7 +281,6 @@ public class AppToko2 {
 
                             } while (!chPerks);
 
-                            // update perks
                             if (editPerks.equalsIgnoreCase("silver")) {
                                 member.setPerks("Silver");
                                 member.setPoint(200);
