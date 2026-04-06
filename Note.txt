@@ -7,3 +7,5 @@ cGoods = Class untuk membuat objek barang
 cGoodsList = Class untuk membuat method yang dapat menyimpan, memuat, dan menghapus data pelanggan pada local data "goods.txt"
 cInvoice = Class untuk generate invoice pembelian secara otomatis dengan format day-date-month-year-pembelian ke-cashier code
 cInvoiceManage = Class untuk membuat method yang dapat menyimpan, memuat, dan menghapus data invoice pembelian pada local data "invoice.txt"
+https://github.com/RavaxNelos/apptoko.git
+https://github.com/Pharb-z/apptoko-1.git

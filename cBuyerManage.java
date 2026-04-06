@@ -43,6 +43,7 @@ public class cBuyerManage {
             while (reader.hasNextLine()) {
                 String line = reader.nextLine();
                 String[] data = line.split(",");
+                
 
                 String idMember = data[0];
                 String buyerName = data[1];

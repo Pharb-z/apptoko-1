@@ -11,8 +11,8 @@ public class AppToko {
         ArrayList<cBuyer> memberList = new ArrayList<>();
         ArrayList<cCart> cart = new ArrayList<>();
         String inputId;
-        String yorn = "y";
-        int qty = 0;
+        String yorn;
+        int qty;
         boolean founde = false;
         boolean cekMember = false;
         cInvoiceManage.load(invoiceList);
@@ -72,12 +72,12 @@ public class AppToko {
         cBuyer mm = cBuyerManage.verifBuyer(memberList, bName);
         int orderNumber = invoiceList.size() + 1;
         if (mm != null) {
-            System.out.printf("| %-82s |\n", "Customer  : " + mm.getName());
-            System.out.printf("| %-82s |\n", "Member    : " + mm.getPerks());
+            System.out.printf("| %-82s |\n", "Customer : " + mm.getName());
+            System.out.printf("| %-82s |\n", "Member   : " + mm.getPerks());
             cekMember = true;
         } else {
-            System.out.printf("| %-82s |\n", "Customer  : " + bName);
-            System.out.printf("| %-82s |\n", "Member    : None");
+            System.out.printf("| %-82s |\n", "Customer : " + bName);
+            System.out.printf("| %-82s |\n", "Member   : None");
         }
         System.out.println("--------------------------------------------------------------------------------------");
         for (cCart c : cart) {
@@ -86,7 +86,6 @@ public class AppToko {
         }
         System.out.println("--------------------------------------------------------------------------------------");
 
-        // default untuk non-member
         totalDiscount = total;
 
         if (!cekMember) {
@@ -124,13 +123,14 @@ public class AppToko {
         System.out.printf("| %-8s : %-36.0f  %-10s  %-8s  %-11s |\n", "Discount", disc, "", "", "");
         System.out.printf("| %-8s : %-36.0f  %-10s  %-8s  %-11s |\n", "Total", totalDiscount, "", "", "");
         System.out.printf("| %-82s |\n", "You got " + poin + " point from this transaction");
-        System.out.println("--------------------------------------------------------------------------------------");
         cInvoice invc = new cInvoice(cashier, bName, totalDiscount, orderNumber);
-        System.out.println("|" + invc + "                                                                   |");
+        System.out.println("| " + invc + "                                                                  |");
         invoiceList.add(invc);
+        System.out.println("--------------------------------------------------------------------------------------");
         cGoodsList.save(goodsList);
         cInvoiceManage.save(invoiceList);
         cBuyerManage.save(memberList);
+        System.out.println("Thankyou!");
         sc.close();
     }
 }

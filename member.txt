@@ -7,7 +7,7 @@
 25082010008,Febriana,Surabaya,Bronze,0
 25082010009,Hattami,Surabaya,Bronze,0
 25082010010,Naisa,Surabaya,Bronze,0
-25082010013,Rivan,Surabaya,Bronze,70
+25082010013,Rivan,Surabaya,Bronze,95
 25082010014,Calista,Surabaya,Bronze,0
 25082010015,Hafiz,Surabaya,Bronze,0
 25082010016,Karenina,Surabaya,Bronze,0
@@ -18,7 +18,7 @@
 25082010021,Jihan,Surabaya,Bronze,0
 25082010023,Dhiya,Surabaya,Bronze,0
 25082010024,Fitra,Surabaya,Bronze,0
-25082010026,Farrel,Sidoarjo,Silver,261
+25082010026,Farrel,Sidoarjo,Gold,520
 25082010027,Khalila,Surabaya,Bronze,83
 25082010028,Putra,Surabaya,Bronze,0
 25082010029,Vietto,Surabaya,Bronze,0
@@ -27,9 +27,9 @@
 25082010034,Immanuel,Surabaya,Bronze,0
 25082010035,Riyan,Surabaya,Bronze,0
 25082010036,Yehezkiel,Surabaya,Bronze,0
-25082010037,Bhinar,Surabaya,Gold,506
+25082010037,Bhinar,Surabaya,Gold,566
 25082010039,Faril,Surabaya,Bronze,0
-25082010041,Farhan,Sidoarjo,Platinum,1432
+25082010041,Farhan,Sidoarjo,Platinum,1718
 25082010042,Dhiar,Surabaya,Bronze,0
 25082010043,Cinta,Surabaya,Bronze,0
 25082010277,Helder,Surabaya,Bronze,165

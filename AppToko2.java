@@ -131,7 +131,7 @@ public class AppToko2 {
                                     cGoodsList.searchGoods(chStock);
                                     for (cGoods g : goodsList) {
                                         if (g.getIdGoods().equalsIgnoreCase(chStock)) {
-                                            System.out.print("Input new stock : ");
+                                            System.out.print("Add new stock : ");
                                             stock = sc.nextInt();
                                             g.setStock(g.getStock() + stock);
                                             System.out.println("Stock updated!");
@@ -216,7 +216,7 @@ public class AppToko2 {
                                         "-------------------------------------------------------------");
 
                                 for (int i = 0; i < memberList.size(); i++) {
-                                    
+
                                     cBuyer m = memberList.get(i);
 
                                     System.out.printf("%-5d %-15s %-15s %-15s %-10s \n",
